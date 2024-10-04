@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Hunt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+
+<body id="body">
+    <h1 id="h1">Monster Hunt</h1>
+        <div id="game">
+            <div id="characterPicture"><b>DU!</b></div>
+            <b id="textBox">Du stehst inmitten der Stadt. Besuche den Händler, jage Monster oder Stelle dich den Dungeon Bossen!</b>
+            <button id="button1" type="button">Charakter</button>
+            <button id="button2" type="button">Händler</button>
+            <button id="button3" type="button">Abenteuer</button>
+            <button id="button4">Dungeon</button>
+            <button id="button5" type="button">Würfelspiel</button>
+            <button id="button6" type="button">Bug Melden</button>
+
+            <span id="skillStat1" class="skillStat1">Lebenspunkte: <strong><span id="healthText">100</span></strong></span>
+            <span id="skillStat2" class="skillStat2">Angriffskraft: <strong><span id="attackText">5</span></strong></span>
+            <span id="skillStat3" class="skillStat3">Reduz. Schaden: <strong><span id="defText">0</span></strong></span>
+
+            <button id="button7" type="button"><strong>+</button></strong><br>
+            <button id="button8" type="button"><strong>+</button></strong><br>
+            <button id="button9" type="button"><strong>+</button></strong><br>
+
+            <span class="gold"><strong><span id="goldText">250</span></strong></span><br>
+            <span class="stone"><strong><span id="stoneText">0</span></strong></span><br>
+            
+            <button id="button10" type="button">Online1</button><br>
+            <button id="button11" type="button">Online2</button><br>
+            <button id="button12" type="button">Online3</button><br>    
+            <b id="namen">Name</b><br>
+            <b  id="stufe">Stufe</b><br>
+            <b id="erfahrung">Erfahrung</b><br>
+            <b id="rang">Rang</b><br>
+
+            
+            <b id="levelBox">1</b>
+            <span id="xpBox" class="xpBox"><strong><span id="xpBoxText">0</span></strong></span><br>
+            <b id="expBox">/100</b>
+            <b id="rankBox">1</b>
+
+
+            <div id="statCont">
+                <span class="skill1">Konstitution: <strong><span id="konstText">1</span></strong></span><br>
+                <span class="skill2">Stärke: <strong><span id="strongText">1</span></strong></span><br>
+                <span class="skill3">Rüstung: <strong><span id="armorText">1</span></strong></span><br>
+            </div>
+            <div id="nameModal" class="modal">
+                <div class="modal-content">
+                    <h2>Charakter Name</h2>
+                    <input type="text" id="nameInput" placeholder="Dein Name" />
+                    <button id="submitName">Bestätigen</button>
+                </div>
+            </div>
+
+            <div id="bugReportModal" class="modal">
+                <div class="modal-content">
+                  <span class="close" id="closeBugModal">&times;</span>
+                  <h2>Bug melden</h2>
+                  <textarea id="bugReportText" placeholder="Beschreibe hier den Bug..."></textarea>
+                  <button id="submitBugReport">Absenden</button>
+                </div>
+              </div>
+
+            <div id="weaponModal" class="modal">
+                <div class="modal-content">
+                    <h2 id="weaponName"></h2>
+                    <img id="weaponImage" style="width: 130px; height: 130px; border-radius: 20px;">
+                    <p>Preis: <span id="weaponPrice"></span> Gold</p>
+                    <p>Power: <span id="weaponPower"></span></p>
+                    <button id="buyWeaponButton">Kaufen</button>
+                    <button onclick="closeModal()">Schließen</button>
+                </div>
+            </div>
+            <div id="armorModal" class="modal">
+                <div id="armorModalContent" class="modal-content">
+                    <img id="armorImage" src="" alt="Rüstung">
+                    <p id="armorName"></p>
+                    <p>Rüstungswert: <span id="armorValue"></span></p>
+                    <p>Preis: <span id="armorPrice"></span></p>
+                    <button id="buyArmorButton">Kaufen</button>
+                    <button id="cancelArmorButton" onclick="closeArmorModal()">Abbrechen</button>
+                </div>
+            </div>
+            
+            <!-- Charakter-Auswahl-Modal -->
+            <div id="modal" class="modal">
+                <div class="modal-content image-selection">
+                    <h2>Wähle dein Charakterbild</h2>
+                    <img id="char1" class="charImage" data-image="ch/ch1.jpeg" src="ch/ch1.jpeg" />
+                    <img id="char2" class="charImage" data-image="ch/ch2.jpeg" src="ch/ch2.jpeg" />
+                    <img id="char3" class="charImage" data-image="ch/ch3.jpeg" src="ch/ch3.jpeg" />
+                    <img id="char4" class="charImage" data-image="ch/ch4.jpeg" src="ch/ch4.jpeg" />
+                    <img id="char5" class="charImage" data-image="ch/ch5.jpeg" src="ch/ch5.jpeg" />
+                    <img id="char6" class="charImage" data-image="ch/ch6.jpeg" src="ch/ch6.jpeg" />
+                    <img id="char7" class="charImage" data-image="ch/ch7.jpeg" src="ch/ch7.jpeg" />
+                    <img id="char8" class="charImage" data-image="ch/ch8.jpeg" src="ch/ch8.jpeg" />
+                    <!-- Füge hier mehr Charakterbilder hinzu -->
+                </div>
+            </div>
+            
+            <!-- Container, wo der Name angezeigt wird -->
+            <div id="nameBox"></div>
+
+            <div id="headBox">
+                <!-- Diese Box bleibt leer, bis ein Helm gekauft wird -->
+            </div>
+            
+            <div id="chestBox">
+                <!-- Diese Box bleibt leer, bis eine Brustpanzerung gekauft wird -->
+            </div>
+            
+            <div id="shieldBox">
+                <!-- Diese Box bleibt leer, bis ein Schild gekauft wird -->
+            </div>
+            
+            <div id="shoeBox">
+                <!-- Diese Box bleibt leer, bis Schuhe gekauft werden -->
+            </div>
+            
+            <div id="weaponBox"></div>
+            <div id="tradeBox1"></div>
+            <div id="tradeBox2"></div>
+            <div id="tradeBox3"></div>
+            <div id="tradeBox4"></div>
+            <div id="tradeBox5"></div>
+            <div id="tradeBox6"></div>
+            <div id="trader"></div>
+            <div id="playBoard"></div>
+            <ul id="weaponList"></ul>
+            <div id="board"></div>
+            <button id="button13" type="button">Dunkler Wald (1-15)</button><br>
+            <button id="button14" type="button">Hochland (15-50)</button><br>
+            <button id="button15" type="button">Brennende Ebene (50-100)</button><br>
+            <button id="button16" type="button">Schattenreich (100-150)</button><br>
+            <div id="monsterStat">
+                <div id="monster"></div>
+                <div id="monster1" class="monster" data-index="0"></div>
+                <div id="monster2" class="monster" data-index="1"></div>
+                <div id="monster3" class="monster" data-index="2"></div>
+                <div id="monster4" class="monster" data-index="3"></div>
+                <div id="monster5" class="monster" data-index="4"></div>   
+                <b id="monsterNameBox">Wildhund</b>
+                <b id="monsterLevelBox">46</b>
+                <div id="monsterStats">
+                    <b id="monsterNamen">Name</b><br>
+                    <b id="monsterStufe">Stufe</b><br>
+
+                </div>
+            </div>
+            <div id="map"></div>
+            <div id="map2"></div>
+            <button id="button17" type="button">Zurück zur Stadt!</button><br>
+            <span id="fightHP" class="fightHP">Lebenspunkte: <strong><span id="healthText1">100</span></strong></span><br>
+            <span id="monsterHP" class="monsterHP">Lebenspunkte: <strong><span id="monsterHPText">100</span></strong></span>
+            <div id="fightPic"></div>
+            <div id="secondNameBox"></div> <!-- Neues Element für den zweiten Namen -->
+            <div id="secondMonsterBox">Wildhund</div>
+            <div id="atkMonster"></div>
+            <div id="atkPlayer"></div>
+
+
+        </div>
+        
+
+
+
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <h2>Wähle deinen Charakter</h2>
+                <div class="image-selection">
+                    <img src="ch/ch1.jpeg" alt="Charakter 1" id="char1" class="selectable-character">
+                    <img src="ch/ch2.jpeg" alt="Charakter 2" id="char2" class="selectable-character">
+                    <img src="ch/ch3.jpeg" alt="Charakter 3" id="char3" class="selectable-character">
+                    <img src="ch/ch4.jpeg" alt="Charakter 4" id="char4" class="selectable-character">
+                    <img src="ch/ch5.jpeg" alt="Charakter 5" id="char5" class="selectable-character">
+                    <img src="ch/ch6.jpeg" alt="Charakter 6" id="char6" class="selectable-character">
+                    <img src="ch/ch7.jpeg" alt="Charakter 6" id="char7" class="selectable-character">
+                    <img src="ch/ch8.jpeg" alt="Charakter 6" id="char8" class="selectable-character">
+                </div>
+            </div>
+        </div>
+
+        <!-- Sell Weapon Modal -->
+        <div id="sellWeaponModal" class="modal">
+            <div class="modal-content">
+                <h2>Waffe verkaufen</h2>
+                <p>Möchtest du diese Waffe wirklich für 50% des Kaufpreises verkaufen?</p>
+                
+                <!-- Container für die Buttons -->
+                <div class="button-container">
+                    <button id="confirmSellButton">Ja, verkaufen</button>
+                    <button id="cancelSellButton">Nein, abbrechen</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sell Armor Modal -->
+        <div id="sellArmorModal" class="modal">
+            <div class="modal-content">
+                <h2>Rüstung verkaufen</h2> <!-- Geändert zu "Rüstung verkaufen" -->
+                <p>Möchtest du diese Rüstung wirklich für 50% des Kaufpreises verkaufen?</p> <!-- Geändert zu "Rüstung" -->
+                
+                <!-- Hier den "Ja, verkaufen"-Button einfügen -->
+                <button id="confirmSellArmorButton">Ja, verkaufen</button> <!-- Button für das Bestätigen des Verkaufs -->
+                
+                <button onclick="closeSellArmorModal()">Nein, abbrechen</button> <!-- Button zum Abbrechen -->
+            </div>
+        </div>
+        <div id="dungeonModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close" id="closeDungeonModal">&times;</span>
+                <h2 id="dungeonMonsterName"></h2>
+                <img id="dungeonMonsterImage" src="" alt="Monster Bild" style="width: 130px; height: 130px;">
+                <p>Level: <span id="dungeonMonsterLevel"></span></p>
+                <p>Leben: <span id="dungeonMonsterHealth"></span></p>
+                <button id="startFightButton">Kampf starten</button>
+                <button id="cancelFightButton">Abbrechen</button>
+            </div>
+        </div>
+  
+        <!-- Sell Helmet Modal -->
+        <div id="sellHelmetModal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <h2>Helm verkaufen</h2> <!-- Geändert zu "Helm verkaufen" -->
+                <p>Möchtest du diesen Helm wirklich für 50% des Kaufpreises verkaufen?</p> <!-- Geändert zu "Helm" -->
+                <button onclick="sellHelmet()">Ja, verkaufen</button>
+                <button onclick="closeSellHelmetModal()">Nein, abbrechen</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+        <footer id="version">Gameversion: v3.0</footer>
+    <script  src="script.js"></script>
+<footer></footer>
+</body>
+</html>

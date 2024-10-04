@@ -1,0 +1,1210 @@
+#version{
+    font-size: 1vw;
+    color: whitesmoke;
+}
+
+#map{
+    background-image: url(files/map3.jpeg);
+    height: 700px; /* Feste Höhe */
+    width: 1190px; 
+    position: absolute;
+    top: 0px;
+    left: 0;
+    border-radius:10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: none;
+
+}
+#map2{
+    background-image: url(files/map4.jpeg);
+    height: 700px; /* Feste Höhe */
+    width: 1190px; 
+    position: absolute;
+    top: 0px;
+    left: 0;
+    border-radius:10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: none;
+
+}
+
+#h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(66, 4, 4);
+    font-size: 4vw;
+    text-align: center;
+    text-shadow: 2px 2px black;
+    margin-top: -1vh;
+   
+}
+
+#body {
+    background-image: url("files/background1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 90vh; /* Stellt sicher, dass der Hintergrund den gesamten Viewport abdeckt */
+    margin: 0; /* Entfernt Standardabstände */
+    background-color: black;
+}
+
+
+
+#game {
+    height: 700px; /* Feste Höhe */
+    width: 1190px; /* Feste Breite */
+    background-image: url(files/newbg.jpeg);
+    background-color: black;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative; /* Referenz für die absolute Positionierung */
+    border: 10px solid;
+    border-radius: 30px;
+    border-color: rgb(37, 0, 0);
+}
+
+#characterPicture {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-size: cover;
+    position: absolute;
+    top: 50px; /* Anfangsposition */
+    left: 280px; /* Anfangsposition */
+    transition: top 1s ease, left 1s ease; /* Sanfte Bewegungen */
+    z-index: 10;
+    color: rgb(202, 202, 202);
+    border-color: whitesmoke;
+    border: 2px solid;
+}
+
+
+.modal {
+    display: none; /* Unsichtbar, bis es angezeigt wird */
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: rgba(9, 4, 56, 0.733);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+    color: whitesmoke;
+}
+
+.image-selection img {
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    cursor: pointer;
+    border: 3px solid transparent;
+}
+
+.image-selection img:hover {
+    border: 3px solid blue;
+}
+#button1:hover{
+
+    color: #6d6bc9; /* Ändert die Textfarbe beim Hover */
+    text-shadow: 0 0 8px #020166; /* Erzeugt einen leuchtenden Schatten */
+}
+
+#button2:hover{
+
+    color: #6d6bc9; /* Ändert die Textfarbe beim Hover */
+    text-shadow: 0 0 8px #020166; /* Erzeugt einen leuchtenden Schatten */
+}
+#button3:hover{
+
+    color: #6d6bc9; /* Ändert die Textfarbe beim Hover */
+    text-shadow: 0 0 8px #020166; /* Erzeugt einen leuchtenden Schatten */
+}
+#button4:hover{
+
+    color: #6d6bc9; /* Ändert die Textfarbe beim Hover */
+    text-shadow: 0 0 8px #020166; /* Erzeugt einen leuchtenden Schatten */
+}
+
+#button5:hover{
+
+    color: #6d6bc9; /* Ändert die Textfarbe beim Hover */
+    text-shadow: 0 0 8px #020166; /* Erzeugt einen leuchtenden Schatten */
+}
+#button6:hover{
+
+    color: #6d6bc9; /* Ändert die Textfarbe beim Hover */
+    text-shadow: 0 0 8px #020166; /* Erzeugt einen leuchtenden Schatten */
+}
+#button7:hover{
+
+    color: #6d6bc9; /* Ändert die Textfarbe beim Hover */
+    text-shadow: 0 0 8px #020166; /* Erzeugt einen leuchtenden Schatten */
+}
+#button8:hover{
+
+    color: #6d6bc9; /* Ändert die Textfarbe beim Hover */
+    text-shadow: 0 0 8px #020166; /* Erzeugt einen leuchtenden Schatten */
+}
+#button9:hover{
+
+    color: #6d6bc9; /* Ändert die Textfarbe beim Hover */
+    text-shadow: 0 0 8px #020166; /* Erzeugt einen leuchtenden Schatten */
+}
+#button10:hover{
+
+    color: #6d6bc9; /* Ändert die Textfarbe beim Hover */
+    text-shadow: 0 0 8px #020166; /* Erzeugt einen leuchtenden Schatten */
+}
+#button11:hover{
+
+    color: #6d6bc9; /* Ändert die Textfarbe beim Hover */
+    text-shadow: 0 0 8px #020166; /* Erzeugt einen leuchtenden Schatten */
+}
+#button12:hover{
+
+    color: #6d6bc9; /* Ändert die Textfarbe beim Hover */
+    text-shadow: 0 0 8px #020166; /* Erzeugt einen leuchtenden Schatten */
+}
+#button13:hover{
+
+    color: #6d6bc9; /* Ändert die Textfarbe beim Hover */
+    text-shadow: 0 0 8px #020166; /* Erzeugt einen leuchtenden Schatten */
+}
+#button14:hover{
+
+    color: #6d6bc9; /* Ändert die Textfarbe beim Hover */
+    text-shadow: 0 0 8px #020166; /* Erzeugt einen leuchtenden Schatten */
+}
+#button15:hover{
+
+    color: #6d6bc9; /* Ändert die Textfarbe beim Hover */
+    text-shadow: 0 0 8px #020166; /* Erzeugt einen leuchtenden Schatten */
+}
+#button16:hover{
+
+    color: #6d6bc9; /* Ändert die Textfarbe beim Hover */
+    text-shadow: 0 0 8px #020166; /* Erzeugt einen leuchtenden Schatten */
+}
+
+#button17:hover{
+
+    color: #6d6bc9; /* Ändert die Textfarbe beim Hover */
+    text-shadow: 0 0 8px #020166; /* Erzeugt einen leuchtenden Schatten */
+}
+
+.monster {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-size: cover;
+    border: 2px solid whitesmoke;
+    display: inline-block;
+    margin: 5px;
+}
+
+.monster-level {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 2px 5px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+#button1 {
+    color: white;
+    background: none;
+    font-size: 20px;
+    position: absolute;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 10;
+    top: 287px;
+    left: 34px;
+}
+
+#button2 {
+    color: white;
+    background: none;
+    font-size: 20px;
+    position: absolute;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 10;
+    top: 350px;
+    left: 34px;
+}
+
+#button3 {
+    color: white;
+    background: none;
+    font-size: 20px;
+    position: absolute;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 10;
+    top: 415px;
+    left: 34px;
+}
+
+#button4 {
+    color: white;
+    background: none;
+    font-size: 20px;
+    position: absolute;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 10;
+    top: 477px;
+    left: 34px;
+}
+
+#button17{
+    color: white;
+    background: none;
+    font-size: 30px;
+    position: absolute;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 10;
+    top: 550px;
+    left: 50%;
+    background-color: rgba(0, 0, 0, 0.637);
+    border-radius: 20px;
+    border-color: #888;
+    border: 2px solid;
+    display: none;
+    transform: translateX(-50%);
+}
+
+
+#button5 {
+    color: white;
+    background: none;
+    font-size: 20px;
+    position: absolute;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 10;
+    top: 544px;
+    left: 34px;
+}
+
+#button6 {
+    color: rgb(209, 9, 9);
+    background: none;
+    font-size: 20px;
+    position: absolute;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 10;
+    top: 600px;
+    left: 60px;
+}
+
+.skillStat1 {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    z-index: 10;
+    color: whitesmoke;
+    left: 350px;
+    top: 320px; /* Stelle sicher, dass diese Position unterschiedlich ist */
+}
+.skillStat2 {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    z-index: 10;
+    color: whitesmoke;
+    left: 350px;
+    top: 440px; /* Stelle sicher, dass diese Position unterschiedlich ist */
+}
+.skillStat3 {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    position: absolute;
+    height: 100px;
+    width: 220px;
+    z-index: 10;
+    color: whitesmoke;
+    left: 350px;
+    top: 560px; /* Stelle sicher, dass diese Position unterschiedlich ist */
+}
+
+.skill1{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 30px;
+    position: absolute ;
+    color: whitesmoke;
+    left: 270px;
+    top: 278px;
+    height: 100px;
+    width: 400px;
+    z-index: 10;
+
+}
+.skill2{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 30px;
+    position: absolute ;
+    color: whitesmoke;
+    left: 270px;
+    top: 396px;
+    height: 100px;
+    width: 200px;
+    z-index: 10;
+}
+.skill3{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 30px;
+    position: absolute ;
+    color: whitesmoke;
+    left: 270px;
+    top: 517px;
+    height: 100px;
+    width: 250px;
+    z-index: 10;
+}
+
+#statCont::before {
+    content: '';
+    position: absolute;
+    top: 260px; /* Verschiebt den Hintergrund nach oben */
+    left: 250px; /* Verschiebt den Hintergrund nach links */
+    right: 0;
+    bottom: 0;
+    background-color: #0000007a; /* Hintergrundfarbe */
+    width: 310px; /* Breiter als der eigentliche Container, um die Verschiebung zu ermöglichen */
+    height: 330px; /* Höher als der eigentliche Container, um die Verschiebung zu ermöglichen */
+    border-radius: 15px; /* Optional: Abgerundete Ecken */
+    border: 2px solid;
+    border-color: rgba(209, 209, 209, 0.623);;
+}
+
+#textBox{
+    font-family:'Times New Roman', Times, serif;
+    height: 90px;
+    width: 650px;
+    position: absolute;
+    background-color: #0000007a;
+    border: 2px solid rgb(29, 28, 28);
+    font-size: 23px;
+    color: whitesmoke;
+    box-shadow: rgb(255, 255, 255);
+    top: 600px;
+    left: 360px;
+    border-radius: 20px;
+    padding-left: 10px;
+    border-color: rgba(209, 209, 209, 0.623);
+    z-index: 30;
+
+}
+
+#button7{
+    font-size: 20px;
+    position: absolute;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    left: 490px;
+    top: 283px;
+    z-index: 20;
+}
+
+#button8{
+    font-size: 20px;
+    position: absolute;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    left: 490px;
+    top: 400px;
+    z-index: 10;
+    
+}
+
+#button9{
+    font-size: 20px;
+    position: absolute;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    left: 490px;
+    top: 520px;
+    z-index: 50;
+    
+    
+}
+
+#button10 {
+    color: white;
+    background: none;
+    font-size: 20px;
+    position: absolute;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 10;
+    top: 65px;
+    left: 34px;
+}
+
+#button11 {
+    color: white;
+    background: none;
+    font-size: 20px;
+    position: absolute;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 10;
+    top: 114px;
+    left: 34px;
+}
+
+#button12 {
+    color: white;
+    background: none;
+    font-size: 20px;
+    position: absolute;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 10;
+    top: 165px;
+    left: 34px;
+}
+
+#goldText{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    position: absolute;
+    color: whitesmoke;
+    top: 203px;
+    left: 70px;
+}
+
+#stoneText{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    position: absolute;
+    color: whitesmoke;
+    top: 240px;
+    left: 70px;
+}
+
+
+
+#namen{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    z-index: 10;
+    color: whitesmoke;
+    left: 400px;
+    top: 30px;
+
+
+}
+#stufe{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    z-index: 10;
+    color: whitesmoke;
+    left: 400px;
+    top: 60px;
+
+
+}
+#erfahrung{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    z-index: 10;
+    color: whitesmoke;
+    left: 400px;
+    top: 90px;
+
+
+}
+#rang{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    z-index: 10;
+    color: whitesmoke;
+    left: 400px;
+    top: 120px;
+
+
+}
+
+#nameBox{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    z-index: 10;
+    color: whitesmoke;
+    left: 550px;
+    top: 30px;
+
+}
+
+#levelBox{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    z-index: 10;
+    color: whitesmoke;
+    left: 550px;
+    top: 60px;
+
+}
+#xpBox{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    z-index: 10;
+    color: whitesmoke;
+    left: 550px;
+    top: 90px;
+
+}
+#rankBox{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    z-index: 10;
+    color: whitesmoke;
+    left: 550px;
+    top: 120px;
+
+}
+.modal {
+    display: none; /* Unsichtbar, bis es angezeigt wird */
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.733);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+    color: whitesmoke;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+#expBox{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    z-index: 10;
+    color: whitesmoke;
+    left: 580px;
+    top: 90px;
+}
+
+.button-container {
+    display: inline-flex; /* Stellt sicher, dass die Buttons nebeneinander sind */
+    gap: 10px; /* Fügt einen Abstand zwischen den Buttons hinzu */
+}
+
+#confirmSellButton, #cancelSellButton {
+    padding: 2px;
+}
+
+#headBox{
+    height: 130px;
+    width: 130px;
+    background-color:#0000007a;
+    border: 2px solid rgba(209, 209, 209, 0.623);
+    border-radius: 20px;
+    position: absolute;
+    left: 890px;
+    top: 70px;
+    color: whitesmoke;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1px;
+}
+#chestBox{
+    height: 130px;
+    width: 130px;
+    background-color:#0000007a;
+    border: 2px solid rgba(209, 209, 209, 0.623);
+    border-radius: 20px;
+    position: absolute;
+    left: 890px;
+    top: 235px;
+    color: whitesmoke;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1px;
+}
+#weaponBox{
+    height: 130px;
+    width: 130px;
+    background-color:#0000007a;
+    border: 2px solid rgba(209, 209, 209, 0.623);
+    border-radius: 20px;
+    position: absolute;
+    left: 740px;
+    top: 235px;
+    color: whitesmoke;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1px;
+
+
+}
+#shieldBox{
+    height: 130px;
+    width: 130px;
+    background-color:#0000007a;
+    border: 2px solid rgba(209, 209, 209, 0.623);
+    border-radius: 20px;
+    position: absolute;
+    left: 1040px;
+    top: 235px;
+    color: whitesmoke;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1px;
+}
+#shoeBox{
+    height: 130px;
+    width: 130px;
+    background-color:#0000007a;
+    border: 2px solid rgba(209, 209, 209, 0.623);
+    border-radius: 20px;
+    position: absolute;
+    left: 890px;
+    top: 410px;
+    color: whitesmoke;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1px;
+}
+
+#tradeBox1{
+    height: 130px;
+    width: 130px;
+    background-color:#0000007a;
+    border: 2px solid rgba(209, 209, 209, 0.623);
+    border-radius: 20px;
+    position: absolute;
+    left: 250px;
+    top: 280px;
+    display: none;
+    font-size: 0px;
+}
+#tradeBox2{
+    height: 130px;
+    width: 130px;
+    background-color:#0000007a;
+    border: 2px solid rgba(209, 209, 209, 0.623);
+    border-radius: 20px;
+    position: absolute;
+    left: 250px;
+    top: 440px;
+    display: none;
+    font-size: 0px;
+}
+#tradeBox3{
+    height: 130px;
+    width: 130px;
+    background-color:#0000007a;
+    border: 2px solid rgba(209, 209, 209, 0.623);
+    border-radius: 20px;
+    position: absolute;
+    left: 410px;
+    top: 280px;
+    display: none;
+    font-size: 0px;
+}
+#tradeBox4{
+    height: 130px;
+    width: 130px;
+    background-color:#0000007a;
+    border: 2px solid rgba(209, 209, 209, 0.623);
+    border-radius: 20px;
+    position: absolute;
+    left: 410px;
+    top: 440px;
+    display: none;
+    font-size: 0px;
+}
+
+#tradeBox5{
+    height: 130px;
+    width: 130px;
+    background-color:#0000007a;
+    border: 2px solid rgba(209, 209, 209, 0.623);
+    border-radius: 20px;
+    position: absolute;
+    left: 570px;
+    top: 280px;
+    display: none;
+    font-size: 0px;
+}
+
+#armorModal {
+    display: none; /* Unsichtbar, bis es geöffnet wird */
+    position: fixed;
+    z-index: 100; /* Überlagert andere Inhalte */
+    left: 0;
+    top: 0;
+    width: 100%; /* Nimmt die gesamte Breite ein */
+    height: 100%; /* Nimmt die gesamte Höhe ein */
+    background-color: rgba(0, 0, 0, 0.5); /* Halbtransparentes Schwarz als Hintergrund */
+}
+
+#armorModalContent {
+    background-color: rgba(0, 0, 0, 0.733);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+    color: whitesmoke;
+}
+
+#armorImage {
+    width: 130px; /* Breite des Rüstungsbilds */
+    height: 130px; /* Höhe des Rüstungsbilds */
+    border-radius: 20px; /* Abgerundete Ecken für das Bild */
+}
+
+#armorName, #armorPrice, #armorValue {
+    font-size: 20px; /* Schriftgröße für die Rüstungsdetails */
+    margin-top: 10px;
+    color: whitesmoke;
+}
+
+
+
+#buyArmorButton:hover, #sellArmorButton:hover, #cancelArmorButton:hover {
+    color: #6d6bc9; /* Gleiche Hover-Effekte */
+    text-shadow: 0 0 8px #020166;
+}
+
+#tradeBox6{
+    height: 130px;
+    width: 130px;
+    background-color:#0000007a;
+    border: 2px solid rgba(209, 209, 209, 0.623);
+    border-radius: 20px;
+    position: absolute;
+    left: 570px;
+    top: 440px;
+    display: none;
+    font-size: 0px;
+}
+
+#trader{
+    background-image: url(files/trader1.jpeg);
+    height: 200px;
+    width: 450px;
+    position: absolute;
+    background-size: cover;
+    top: 30px;
+    left: 250px;
+    border: 2px solid;
+    border-radius: 30px;
+    border-color: rgba(209, 209, 209, 0.623);
+    display: none;
+
+}
+
+.skillStat1, .skillStat2, .skillStat3 {
+    display: inline-block;
+}
+
+
+#board{
+    background-image: url(files/board1.jpeg);
+    height: 340px;
+    width: 910px;
+    position: absolute;
+    background-size: cover;
+    top: 30px;
+    left: 250px;
+    border: 2px solid;
+    border-radius: 30px;
+    border-color: rgba(209, 209, 209, 0.623);
+    display: none;
+    background-position: center;
+    display: none;
+
+}
+
+#button13{
+    color: white;
+    background: none;
+    font-size: 25px;
+    position: absolute;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 10;
+    top: 400px;
+    left: 250px;
+    background-color: #0000007a;
+    border: 2px solid rgba(209, 209, 209, 0.623);
+    color: whitesmoke;
+    box-shadow: rgb(255, 255, 255);
+    border-radius: 20px;
+    height: 50px;
+    width: 400px;
+    display: none;
+
+}
+#button14{
+    color: white;
+    background: none;
+    font-size: 25px;
+    position: absolute;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 10;
+    top: 400px;
+    left: 765px;
+    background-color: #0000007a;
+    border: 2px solid rgba(209, 209, 209, 0.623);
+    color: whitesmoke;
+    box-shadow: rgb(255, 255, 255);
+    border-radius: 20px;
+    height: 50px;
+    width: 400px;
+    display: none;
+    
+}
+#button15{
+    color: white;
+    background: none;
+    font-size: 25px;
+    position: absolute;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 10;
+    
+    top: 500px;
+    left: 250px;
+    background-color: #0000007a;
+    border: 2px solid rgba(209, 209, 209, 0.623);
+    color: whitesmoke;
+    box-shadow: rgb(255, 255, 255);
+    border-radius: 20px;
+    height: 50px;
+    width: 400px;
+    display: none;
+    
+}
+#button16{
+    color: white;
+    background: none;
+    font-size: 25px;
+    position: absolute;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 10;
+    top: 500px;
+    left: 765px;
+    background-color: #0000007a;
+    border: 2px solid rgba(209, 209, 209, 0.623);
+    color: whitesmoke;
+    box-shadow: rgb(255, 255, 255);
+    border-radius: 20px;
+    height: 50px;
+    width: 400px;
+    display: none;
+}
+
+
+#monsterNamen{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    z-index: 10;
+    color: whitesmoke;
+    left: 900px;
+    top: 50px;
+    display: none;
+}
+#monsterStufe{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    z-index: 10;
+    color: whitesmoke;
+    left: 900px;
+    top: 100px;
+    display: none;
+}
+
+#monsterLeben{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    z-index: 10;
+    color: whitesmoke;
+    left: 900px;
+    top: 90px;
+    display: none;
+
+}
+#monster1, #monster2, #monster3, #monster4, #monster5 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-size: cover;
+    position: absolute;
+    top: 50px; /* Anfangsposition */
+    left: 780px; /* Anfangsposition */
+    transition: top 1s ease, left 1s ease; /* Sanfte Bewegungen */
+    z-index: 10;
+    color: rgb(202, 202, 202);
+    border-color: whitesmoke;
+    border: 2px solid;
+    display: none;
+    
+}
+#monsterNameBox{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    z-index: 10;
+    color: whitesmoke;
+    left: 1000px;
+    top: 50px;
+    display: none;
+}
+
+
+
+#monsterLevelBox{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    z-index: 10;
+    color: whitesmoke;
+    left: 1000px;
+    top: 100px;
+    display: none;
+}
+
+#fightHP{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 30px;
+    position: absolute;
+    height: 90px;
+    width: 180px;
+    z-index: 10;
+    color: whitesmoke;
+    left: 100px;
+    top: 400px;
+    background-color:#0000007a;
+    border: 2px solid rgba(209, 209, 209, 0.623);
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-top: 20px;
+    display: none;
+
+}
+
+#monsterHP{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 30px;
+    position: absolute;
+    height: 90px;
+    width: 180px;
+    z-index: 10;
+    color: whitesmoke;
+    left: 850px;
+    top: 400px;
+    background-color:#0000007a;
+    border: 2px solid rgba(209, 209, 209, 0.623);
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-top: 20px;
+    display: none;
+}
+
+#fightPic{
+    background-image: url(files/fight2.jpeg);
+    height: 700px; /* Feste Höhe */
+    width: 1190px; 
+    position: absolute;
+    top: 0px;
+    left: 0;
+    border-radius:10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: none;
+
+
+
+}
+
+#secondNameBox{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 50px;
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    z-index: 10;
+    color: whitesmoke;
+    left: 100px;
+    top: 300px;
+    display: none;
+}
+
+#secondMonsterBox{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 45px;
+    position: absolute;
+    height: 100px;
+    width: 340px;
+    z-index: 10;
+    color: whitesmoke;
+    left: 850px;
+    top: 300px;
+    display: none;
+
+}
+
+#atkMonster{
+    background-image: url(files/blood.gif);
+    height: 150px;
+    width: 150px;
+    position:absolute;
+    top: 380px;
+    left: 100px;
+    background-repeat: no-repeat;
+    z-index: 30;
+    display: none;
+}
+
+#atkPlayer{
+    background-image: url(files/blood.gif);
+    height: 150px;
+    width: 150px;
+    position:absolute;
+    top: 380px;
+    left: 850px;
+    background-repeat: no-repeat;
+    z-index: 30;
+    display: none;
+}
+
+
